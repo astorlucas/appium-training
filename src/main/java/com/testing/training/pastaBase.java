@@ -13,14 +13,15 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class pastaBase {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		File file = new File("src\\main\\java");
 		File fileS = new File("ApiDemos-debug.apk");
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "emulador1");
 		cap.setCapability(MobileCapabilityType.APP, "C:\\Users\\lucas\\eclipse-workspace\\com.testing.training\\src\\main\\java\\ApiDemos-debug.apk");
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
 		AndroidDriver<AndroidElement> ad = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
-		
+		return ad;
 	}
 
 }
