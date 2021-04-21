@@ -13,7 +13,8 @@ public class basics extends pastaBase {
 		AndroidDriver<AndroidElement> driver =Capabilities();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElementByXPath("//android.widget.TextView[@text='Preference']").click();
-
+		//TODO how to click on those damn things at the start of the app
+		
 	}
 
 }
