@@ -1,5 +1,7 @@
 package com.testing.training;
 
+import java.awt.Desktop;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +20,13 @@ import io.appium.java_client.touch.LongPressOptions;
 
 public class gesturesTest extends pastaBase {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static void main(String[] args) throws IOException {
+		System.out.println("Hola");
+		//Code to run the batch
+		Runtime runTime = Runtime.getRuntime();
+        
+		Process process = runTime.exec("cmd /c start C:\\Users\\lucas\\eclipse-workspace\\com.testing.training\\initialSetUp.bat");
+		/*
 		AndroidDriver<AndroidElement> driver =Capabilities();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
@@ -30,7 +38,7 @@ public class gesturesTest extends pastaBase {
 		driver.findElementByXPath("//android.widget.TextView[@text='1. Custom Adapter']").click();
 		WebElement element2 = driver.findElementByXPath("//android.widget.TextView[@text='Peoples Names']");
 		//Long press action
-		gestures.longPress(LongPressOptions.longPressOptions().withElement(element(element2)).withDuration(Duration.ofSeconds(2))).release().perform();
+		gestures.longPress(LongPressOptions.longPressOptions().withElement(element(element2)).withDuration(Duration.ofSeconds(2))).release().perform();*/
 	}
 
 }
